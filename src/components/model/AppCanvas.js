@@ -5,10 +5,10 @@ import { OrbitControls } from "@react-three/drei";
 import Model from "./Model";
 import Loader from "./Loader";
 import { PerspectiveCamera } from "@react-three/drei";
-import { sRGBEncoding } from "three";
 
 function AppCanvas(props) {
   const ref = useRef();
+  const isBrowser = typeof window !== "undefined";
   return (
     <>
       <button title="log" onClick={() => console.log(ref)} />
@@ -17,10 +17,9 @@ function AppCanvas(props) {
         width="100%"
         gl={{
           antialias: true,
-          // outputEncoding: sRGBEncoding,
           // physicallyCorrectLights: true,
         }}
-        dpr={Math.max(window.devicePixelRatio, 2)}
+        dpr={isBrowser ? Math.max(window.devicePixelRatio, 2) : null}
       >
         <PerspectiveCamera makeDefault position={[-3.1, 3.5, 3]} zoom={0.6} />
         <OrbitControls ref={ref} target={[0, 1, 0]} position={[-3.1, 3.5, 3]} />
