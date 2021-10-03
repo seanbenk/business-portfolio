@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-about-js-360da760ea8cbedaaec9.js","mappings":"gIAMA,UAJA,SAAeA,GACb,OAAO","sources":["webpack://portfolio/./src/pages/about.js"],"sourcesContent":["import React from \"react\";\r\n\r\nfunction about(props) {\r\n  return <div>the about page!</div>;\r\n}\r\n\r\nexport default about;\r\n"],"names":["props"],"sourceRoot":""}
