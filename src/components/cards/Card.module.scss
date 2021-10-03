@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 50%;
+  background-color: white;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
