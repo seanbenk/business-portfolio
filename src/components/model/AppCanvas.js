@@ -19,7 +19,7 @@ function AppCanvas(props) {
       dpr={isBrowser ? Math.max(window.devicePixelRatio, 2) : null}
     >
       <PerspectiveCamera makeDefault position={[-3.1, 3.5, 3]} zoom={0.6} />
-      <OrbitControls ref={ref} target={[0, 1, 0]} position={[-3.1, 3.5, 3]} />
+      <OrbitControls target={[0, 1, 0]} position={[-3.1, 3.5, 3]} />
       <Suspense fallback={<Loader />}>
         {/* <directionalLight
             position={[2.2, -5, 3.8]}
