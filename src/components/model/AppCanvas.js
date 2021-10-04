@@ -17,23 +17,26 @@ function AppCanvas(props) {
         // physicallyCorrectLights: true,
       }}
       dpr={isBrowser ? Math.max(window.devicePixelRatio, 2) : null}
+      shadows
     >
       <PerspectiveCamera makeDefault position={[-3.1, 3.5, 3]} zoom={0.6} />
       <OrbitControls target={[0, 1, 0]} position={[-3.1, 3.5, 3]} />
       <Suspense fallback={<Loader />}>
-        {/* <directionalLight
-            position={[2.2, -5, 3.8]}
-            castShadow
-            intensity={1}
-            color={0xda94ff}
-          />
-          <directionalLight
-            position={[-5.8, 1.9, 4.5]}
-            castShadow
-            intensity={1}
-            color={0xda94ff}
-          /> */}
-        <ambientLight intensity={3} />
+        <directionalLight
+          position={[2.2, -5, 3.8]}
+          castShadow
+          intensity={1}
+          color={0xda94ff}
+          // color={0xffffff}
+        />
+        <directionalLight
+          position={[-5.8, 1.9, 4.5]}
+          castShadow
+          intensity={1}
+          color={0xda94ff}
+          // color={0xffffff}
+        />
+        <ambientLight intensity={0.5} />
         <Model />
       </Suspense>
     </Canvas>

@@ -7,722 +7,736 @@ import { useGLTF, OrthographicCamera } from "@react-three/drei";
 
 export default function Model(props) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/isometric.gltf");
+  const { nodes, materials } = useGLTF("/isometric.glb");
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Scene">
-        <group
-          name="Camera"
-          position={[-9.1791563, 8.50330067, 9.17608833]}
-          rotation={[1.22335478, -0.33031682, 0.73040505]}
-          scale={[0.25999999, 0.26000011, 0.25999999]}
-          userData={{ name: "Camera" }}
-        >
-          <OrthographicCamera
-            name="Camera_Orientation"
-            makeDefault={false}
-            far={1000}
-            near={0.1}
-            rotation={[-Math.PI / 2, 0, 0]}
-            userData={{ name: "Camera_Orientation" }}
-          />
-        </group>
-        <group
-          name="Area"
-          position={[2.27037835, 3.81781006, 5.00922155]}
-          rotation={[1.24124819, 0.1172462, -0.32954824]}
-          scale={[5.46000147, 5.46000004, 5.46000051]}
-          userData={{ name: "Area" }}
-        />
-        <group
-          name="Area001"
-          position={[3.70178914, 6.07535315, -3.63164926]}
-          rotation={[1e-8, Math.PI / 4, -0.95993103]}
-          scale={[1.89189017, 1.89189017, 1.89189029]}
-          userData={{ name: "Area.001" }}
-        />
-        <group
-          name="Area002"
-          position={[-5.77493429, 4.5460043, -1.93096685]}
-          rotation={[1.63337449, -0.46063343, 1.91648414]}
-          scale={[5.2552495, 5.25525188, 5.25525045]}
-          userData={{ name: "Area.002" }}
-        />
-        <group
-          name="Point"
-          position={[1.41796136, 1.12785375, -0.82031786]}
-          userData={{ name: "Point" }}
-        >
-          <pointLight
-            name="Point_Orientation"
-            intensity={2}
-            decay={2}
-            color="#e278ff"
-            rotation={[-Math.PI / 2, 0, 0]}
-            userData={{ name: "Point_Orientation" }}
-          />
-        </group>
-        <group
-          name="Point001"
-          position={[1.20375025, 1.03121102, -0.3191655]}
-          scale={[2.27427244, 0.90970898, 0.90970898]}
-          userData={{ name: "Point.001" }}
-        />
-        <group
-          name="Point002"
-          position={[1.20375025, 0.82339311, -0.3191655]}
-          scale={[2.27427244, 0.90970898, 0.90970898]}
-          userData={{ name: "Point.002" }}
-        />
-        <group
-          name="Point003"
-          position={[1.20375025, 0.73609895, -0.3191655]}
-          scale={[2.27427244, 0.90970898, 0.90970898]}
-          userData={{ name: "Point.003" }}
-        />
-        <group
-          name="Plane037"
-          position={[-0.43171215, 0.86643672, -1.28033257]}
-          userData={{ name: "Plane.037" }}
-        />
-        <mesh
-          name="Plane001"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane001.geometry}
-          material={nodes.Plane001.material}
-          position={[-0.03491282, 0.37587047, 0.07781464]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Plane.001" }}
-        />
-        <mesh
-          name="Plane002"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane002.geometry}
-          material={nodes.Plane002.material}
-          position={[-0.51830077, 0.23807734, 0.55916524]}
-          scale={[0.59149998, 0.59149998, 0.59149998]}
-          userData={{ name: "Plane.002" }}
-        />
-        <group
-          name="Plane003"
-          position={[1.13900805, 1.18444514, -0.57527614]}
-          rotation={[0, Math.PI / 9, 0]}
-          scale={[0.1365, 0.1365, 0.1365]}
-          userData={{ name: "Plane.003" }}
-        >
-          <mesh
-            name="Plane006_1"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane006_1.geometry}
-            material={nodes.Plane006_1.material}
-          />
-          <mesh
-            name="Plane006_2"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane006_2.geometry}
-            material={nodes.Plane006_2.material}
-          />
-        </group>
-        <mesh
-          name="Cube"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube.geometry}
-          material={nodes.Cube.material}
-          position={[1.11148262, 1.19533479, -0.65090156]}
-          rotation={[0, Math.PI / 9, 0]}
-          scale={[0.45500016, 0.45499998, 0.45500016]}
-          userData={{ name: "Cube" }}
-        />
-        <mesh
-          name="Plane004"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane004.geometry}
-          material={nodes.Plane004.material}
-          position={[-0.03491282, 0.37587047, 0.07781464]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Plane.004" }}
-        />
-        <mesh
-          name="Circle"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle.geometry}
-          material={nodes.Circle.material}
-          position={[1.20321071, 0.60661983, 0.12466964]}
-          scale={[0.3822, 0.546, 0.3822]}
-          userData={{ name: "Circle" }}
-        />
-        <mesh
-          name="Circle001"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle001.geometry}
-          material={nodes.Circle001.material}
-          position={[1.20321071, 0.60661983, 0.12466964]}
-          scale={[0.3822, 0.546, 0.3822]}
-          userData={{ name: "Circle.001" }}
-        />
-        <mesh
-          name="Cylinder"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder.geometry}
-          material={nodes.Cylinder.material}
-          position={[1.19485426, 1.1475414, -0.7695992]}
-          scale={[0.59149998, 0.59149998, 0.59149998]}
-          userData={{ name: "Cylinder" }}
-        />
-        <mesh
-          name="Plane005"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane005.geometry}
-          material={nodes.Plane005.material}
-          position={[-0.10684356, 2.1122663, -1.61371553]}
-          scale={[0.44364822, 0.45372224, 0.44364822]}
-          userData={{ name: "Plane.005" }}
-        />
-        <mesh
-          name="Plane006"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane006.geometry}
-          material={nodes.Plane006.material}
-          position={[-0.03491282, 0.37587047, 0.07781464]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Plane.006" }}
-        />
-        <group
-          name="Plane007"
-          position={[-0.03491282, 0.37587047, 0.07781464]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Plane.007" }}
-        >
-          <mesh
-            name="Plane010_1"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane010_1.geometry}
-            material={nodes.Plane010_1.material}
-          />
-          <mesh
-            name="Plane010_2"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane010_2.geometry}
-            material={materials["Material.003"]}
-          />
-        </group>
-        <mesh
-          name="Plane"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane.geometry}
-          material={nodes.Plane.material}
-          position={[-0.81842208, 2.94332743, -1.51144266]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Plane" }}
-        />
-        <mesh
-          name="Cylinder001"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder001.geometry}
-          material={nodes.Cylinder001.material}
-          position={[-0.10715508, 2.94332743, -1.38679528]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Cylinder.001" }}
-        />
-        <mesh
-          name="Plane008"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane008.geometry}
-          material={nodes.Plane008.material}
-          position={[0.34784505, 2.97310948, -1.36559415]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Plane.008" }}
-        />
-        <mesh
-          name="Plane009"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane009.geometry}
-          material={nodes.Plane009.material}
-          position={[1.31573987, 1.46535158, -1.04909897]}
-          rotation={[-3e-8, Math.PI / 9, -Math.PI / 2]}
-          scale={[0.59149998, 0.59150016, 0.59150016]}
-          userData={{ name: "Plane.009" }}
-        />
-        <mesh
-          name="Plane010"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane010.geometry}
-          material={nodes.Plane010.material}
-          position={[1.39879906, 1.67828035, -0.39133322]}
-          rotation={[1.56574555, 0.08712059, -1.51281428]}
-          scale={[0.59149998, 0.59149998, 0.59150004]}
-          userData={{ name: "Plane.010" }}
-        />
-        <mesh
-          name="Plane015"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane015.geometry}
-          material={nodes.Plane015.material}
-          position={[1.36335647, 0.60243756, -0.83167958]}
-          scale={[0.59149998, 0.59149998, 0.59149998]}
-          userData={{ name: "Plane.015" }}
-        />
-        <mesh
-          name="Plane011"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane011.geometry}
-          material={nodes.Plane011.material}
-          position={[1.11305702, 1.18445635, -1.01667237]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Plane.011" }}
-        />
-        <group
-          name="Plane012"
-          position={[1.11305702, 1.19219542, -1.01667237]}
-          rotation={[0, 0, 0.07215365]}
-          scale={[0.45500001, 0.45500001, 0.45499998]}
-          userData={{ name: "Plane.012" }}
-        >
-          <mesh
-            name="Plane017_1"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane017_1.geometry}
-            material={materials["Material.004"]}
-          />
-          <mesh
-            name="Plane017_2"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane017_2.geometry}
-            material={nodes.Plane017_2.material}
-          />
-        </group>
-        <mesh
-          name="Plane013"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane013.geometry}
-          material={nodes.Plane013.material}
-          position={[1.36335647, 0.60243756, -0.83167958]}
-          scale={[0.59149998, 0.59149998, 0.59149998]}
-          userData={{ name: "Plane.013" }}
-        />
-        <mesh
-          name="Plane014"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane014.geometry}
-          material={nodes.Plane014.material}
-          position={[1.36335647, 0.60243756, -0.83167958]}
-          scale={[0.59149998, 0.59149998, 0.59149998]}
-          userData={{ name: "Plane.014" }}
-        />
-        <group
-          name="Plane016"
-          position={[1.2828573, 0.59903461, -0.31916988]}
-          scale={[1.52100027, 1.52100027, 1.52100027]}
-          userData={{ name: "Plane.016" }}
-        >
-          <mesh
-            name="Plane021_1"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane021_1.geometry}
-            material={nodes.Plane021_1.material}
-          />
-          <mesh
-            name="Plane021_2"
-            castShadow
-            receiveShadow
-            geometry={nodes.Plane021_2.geometry}
-            material={materials.Material}
-          />
-        </group>
-        <mesh
-          name="Circle002"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle002.geometry}
-          material={nodes.Circle002.material}
-          position={[-1.30444133, 0.60660374, -1.21249104]}
-          scale={[0.25999999, 0.25999999, 0.25999999]}
-          userData={{ name: "Circle.002" }}
-        />
-        <group
-          name="Circle003"
-          position={[-1.30444133, 0.60660374, -1.21249104]}
-          scale={[0.25999999, 0.25999999, 0.25999999]}
-          userData={{ name: "Circle.003" }}
-        >
-          <mesh
-            name="Circle003_1"
-            castShadow
-            receiveShadow
-            geometry={nodes.Circle003_1.geometry}
-            material={nodes.Circle003_1.material}
-          />
-          <mesh
-            name="Circle003_2"
-            castShadow
-            receiveShadow
-            geometry={nodes.Circle003_2.geometry}
-            material={nodes.Circle003_2.material}
-          />
-        </group>
-        <mesh
-          name="Torus"
-          castShadow
-          receiveShadow
-          geometry={nodes.Torus.geometry}
-          material={nodes.Torus.material}
-          position={[0.11955644, 2.92490411, -1.38574243]}
-          scale={[0.87658787, 0.87658787, 0.87658787]}
-          userData={{ name: "Torus" }}
-        />
-        <mesh
-          name="Circle004"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle004.geometry}
-          material={nodes.Circle004.material}
-          position={[1.55433273, 2.34622788, -0.95898074]}
-          rotation={[Math.PI / 2, -3e-8, -Math.PI / 2]}
-          scale={[0.19999999, 0.19999999, 0.19999999]}
-          userData={{ name: "Circle.004" }}
-        />
-        <mesh
-          name="Plane017"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane017.geometry}
-          material={nodes.Plane017.material}
-          position={[1.3022368, 0.68508279, 1.16065121]}
-          userData={{ name: "Plane.017" }}
-        />
-        <mesh
-          name="Vert"
-          castShadow
-          receiveShadow
-          geometry={nodes.Vert.geometry}
-          material={nodes.Vert.material}
-          position={[1.18531966, 1.19543636, -0.67777598]}
-          userData={{ name: "Vert" }}
-        />
-        <mesh
-          name="Cylinder002"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cylinder002.geometry}
-          material={nodes.Cylinder002.material}
-          position={[1.30223703, 0.68508255, 1.16065121]}
-          userData={{ name: "Cylinder.002" }}
-        />
-        <mesh
-          name="Plane018"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane018.geometry}
-          material={nodes.Plane018.material}
-          position={[0.37944126, 1.01315689, -0.76283741]}
-          scale={[0.36000001, 0.36000001, 0.36000001]}
-          userData={{ name: "Plane.018" }}
-        />
-        <mesh
-          name="Plane019"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane019.geometry}
-          material={nodes.Plane019.material}
-          position={[0.37944126, 1.01315689, -0.76283741]}
-          scale={[0.36000001, 0.36000001, 0.36000001]}
-          userData={{ name: "Plane.019" }}
-        />
-        <mesh
-          name="Plane020"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane020.geometry}
-          material={nodes.Plane020.material}
-          position={[0.37944126, 1.01315677, -0.76283735]}
-          scale={[1.10000002, 1.10000002, 1.10000002]}
-          userData={{ name: "Plane.020" }}
-        />
-        <mesh
-          name="Plane021"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane021.geometry}
-          material={nodes.Plane021.material}
-          position={[0.40826634, 1.01515543, -0.76283741]}
-          userData={{ name: "Plane.021" }}
-        />
-        <mesh
-          name="Circle005"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle005.geometry}
-          material={nodes.Circle005.material}
-          position={[0.37944126, 1.03970981, -0.76283741]}
-          scale={[0.10000002, 0.10000002, 0.10000002]}
-          userData={{ name: "Circle.005" }}
-        />
-        <mesh
-          name="Plane022"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane022.geometry}
-          material={nodes.Plane022.material}
-          position={[0.37944126, 0.71710312, -0.75712448]}
-          rotation={[1.65806277, 0, 0]}
-          scale={[0.19999999, 0.19999999, 0.19999999]}
-          userData={{ name: "Plane.022" }}
-        />
-        <mesh
-          name="Plane023"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane023.geometry}
-          material={nodes.Plane023.material}
-          position={[-0.03491282, 0.38310415, 0.07781464]}
-          scale={[0.45044518, 0.45044518, 0.45044518]}
-          userData={{ name: "Plane.023" }}
-        />
-        <mesh
-          name="Circle006"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle006.geometry}
-          material={nodes.Circle006.material}
-          position={[0.37944126, 0.64790136, -0.76283753]}
-          rotation={[Math.PI / 2, 0, 0]}
-          userData={{ name: "Circle.006" }}
-        />
-        <mesh
-          name="Circle007"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle007.geometry}
-          material={nodes.Circle007.material}
-          position={[0.37944126, 0.6633808, -0.76283753]}
-          rotation={[Math.PI / 2, 0, 0]}
-          userData={{ name: "Circle.007" }}
-        />
-        <mesh
-          name="Plane024"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane024.geometry}
-          material={nodes.Plane024.material}
-          position={[-0.43171215, 0.60662651, -1.28033257]}
-          scale={[0.19999999, 0.19999999, 0.19999999]}
-          userData={{ name: "Plane.024" }}
-        />
-        <mesh
-          name="Circle008"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle008.geometry}
-          material={nodes.Circle008.material}
-          position={[1.00694394, 0.81286156, -0.31916988]}
-          rotation={[0, 0, -Math.PI / 2]}
-          scale={[0.5, 0.5, 0.5]}
-          userData={{ name: "Circle.008" }}
-        />
-        <mesh
-          name="Plane025"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane025.geometry}
-          material={nodes.Plane025.material}
-          position={[-0.03491282, 0.37587047, 0.07781464]}
-          scale={[0.45499998, 0.45499998, 0.45499998]}
-          userData={{ name: "Plane.025" }}
-        />
-        <mesh
-          name="Plane026"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane026.geometry}
-          material={nodes.Plane026.material}
-          position={[1.22026205, 0.84600174, -0.22135165]}
-          scale={[0.10000002, 0.10000002, 0.10000002]}
-          userData={{ name: "Plane.026" }}
-        />
-        <mesh
-          name="Circle009"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle009.geometry}
-          material={nodes.Circle009.material}
-          position={[0.86807525, 2.06904602, -1.35732865]}
-          scale={[0.10000002, 0.10000002, 0.10000002]}
-          userData={{ name: "Circle.009" }}
-        />
-        <mesh
-          name="Plane027"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane027.geometry}
-          material={nodes.Plane027.material}
-          position={[0.86050826, 2.07049489, -1.36600542]}
-          userData={{ name: "Plane.027" }}
-        />
-        <mesh
-          name="Plane028"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane028.geometry}
-          material={nodes.Plane028.material}
-          position={[1.10048985, 2.06905293, -1.36546314]}
-          userData={{ name: "Plane.028" }}
-        />
-        <mesh
-          name="Plane029"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane029.geometry}
-          material={nodes.Plane029.material}
-          position={[1.16692352, 2.07634068, -1.36546314]}
-          rotation={[0, 0, -0.26179941]}
-          userData={{ name: "Plane.029" }}
-        />
-        <mesh
-          name="Plane030"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane030.geometry}
-          material={nodes.Plane030.material}
-          position={[1.30904305, 2.06905293, -1.32081926]}
-          rotation={[Math.PI, -1.5e-7, Math.PI]}
-          userData={{ name: "Plane.030" }}
-        />
-        <mesh
-          name="Plane031"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane031.geometry}
-          material={nodes.Plane031.material}
-          position={[1.38285077, 2.06905293, -1.36546314]}
-          userData={{ name: "Plane.031" }}
-        />
-        <mesh
-          name="Plane032"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane032.geometry}
-          material={nodes.Plane032.material}
-          position={[1.45285082, 2.06905293, -1.36546314]}
-          userData={{ name: "Plane.032" }}
-        />
-        <mesh
-          name="Plane034"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane034.geometry}
-          material={nodes.Plane034.material}
-          position={[1.26705754, 2.42927623, -1.36901653]}
-          rotation={[0, 0, -0.26179941]}
-          userData={{ name: "Plane.034" }}
-        />
-        <mesh
-          name="Plane035"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane035.geometry}
-          material={nodes.Plane035.material}
-          position={[1.40917706, 2.42198825, -1.32437265]}
-          rotation={[Math.PI, -1.5e-7, Math.PI]}
-          userData={{ name: "Plane.035" }}
-        />
-        <mesh
-          name="Plane036"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane036.geometry}
-          material={nodes.Plane036.material}
-          position={[1.48401845, 2.42198825, -1.32301593]}
-          rotation={[Math.PI, -1.5e-7, Math.PI]}
-          userData={{ name: "Plane.036" }}
-        />
-        <mesh
-          name="Plane038"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane038.geometry}
-          material={nodes.Plane038.material}
-          position={[-0.43171215, 1.161919, -1.28033257]}
-          scale={[0.05400001, 0.10000002, 0.10000002]}
-          userData={{ name: "Plane.038" }}
-        />
-        <mesh
-          name="Plane039"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane039.geometry}
-          material={nodes.Plane039.material}
-          position={[1.30787408, 0.77300102, 0.74968082]}
-          userData={{ name: "Plane.039" }}
-        />
-        <mesh
-          name="Circle010"
-          castShadow
-          receiveShadow
-          geometry={nodes.Circle010.geometry}
-          material={nodes.Circle010.material}
-          position={[1.30188048, 1.90204024, 0.77364892]}
-          scale={[0.10000002, 0.10000002, 0.10000002]}
-          userData={{ name: "Circle.010" }}
-        />
-        <mesh
-          name="Plane033"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane033.geometry}
-          material={nodes.Plane033.material}
-          position={[1.29688466, 2.12334967, 0.78591603]}
-          scale={[0.027, 0.05000001, 0.05000001]}
-          userData={{ name: "Plane.033" }}
-        />
-        <mesh
-          name="Plane040"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane040.geometry}
-          material={nodes.Plane040.material}
-          position={[1.07765198, 1.18474579, -0.27429676]}
-          scale={[0.10000002, 0.10000002, 0.10000002]}
-          userData={{ name: "Plane.040" }}
-        />
-        <mesh
-          name="Plane041"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane041.geometry}
-          material={nodes.Plane041.material}
-          position={[1.07765198, 1.18474579, -0.27429676]}
-          rotation={[Math.PI, -1.22173067, Math.PI]}
-          scale={[0.10000002, 0.10000002, 0.10000002]}
-          userData={{ name: "Plane.041" }}
+      <group
+        position={[-9.18, 8.5, 9.18]}
+        rotation={[1.22, -0.33, 0.73]}
+        scale={[0.26, 0.26, 0.26]}
+      >
+        <OrthographicCamera
+          makeDefault={false}
+          far={1000}
+          near={0.1}
+          rotation={[-Math.PI / 2, 0, 0]}
         />
       </group>
+      <group position={[1.42, 1.13, -0.82]}>
+        <pointLight
+          intensity={2}
+          decay={2}
+          color="#e278ff"
+          rotation={[-Math.PI / 2, 0, 0]}
+        />
+      </group>
+      <group position={[1.11, 1.55, -0.38]} rotation={[2.17, 0.17, 0.2]}>
+        <spotLight
+          intensity={50}
+          angle={Math.PI / 8}
+          penumbra={0.15}
+          decay={2}
+          color="#f279ff"
+          rotation={[-Math.PI / 2, 0, 0]}
+        />
+      </group>
+      <group position={[-0.03, 0.38, 0.08]} scale={[0.45, 0.45, 0.45]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane_1.geometry}
+          material={nodes.Plane_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane_2.geometry}
+          material={materials["Material.015"]}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane002.geometry}
+        material={nodes.Plane002.material}
+        position={[-0.52, 0.24, 0.56]}
+        scale={[0.59, 0.59, 0.59]}
+      />
+      <group
+        position={[1.14, 1.18, -0.58]}
+        rotation={[0, Math.PI / 9, 0]}
+        scale={[0.14, 0.14, 0.14]}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane006_1.geometry}
+          material={materials["Material.012"]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane006_2.geometry}
+          material={nodes.Plane006_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube.geometry}
+        material={nodes.Cube.material}
+        position={[1.11, 1.2, -0.65]}
+        rotation={[0, Math.PI / 9, 0]}
+        scale={[0.46, 0.45, 0.46]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane004.geometry}
+        material={nodes.Plane004.material}
+        position={[-0.03, 0.38, 0.08]}
+        scale={[0.45, 0.45, 0.45]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Circle.geometry}
+        material={nodes.Circle.material}
+        position={[1.2, 0.61, 0.12]}
+        scale={[0.38, 0.55, 0.38]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Circle001.geometry}
+        material={nodes.Circle001.material}
+        position={[1.2, 0.61, 0.12]}
+        scale={[0.38, 0.55, 0.38]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cylinder.geometry}
+        material={nodes.Cylinder.material}
+        position={[1.19, 1.15, -0.77]}
+        scale={[0.59, 0.59, 0.59]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane005.geometry}
+        material={nodes.Plane005.material}
+        position={[-0.11, 2.11, -1.61]}
+        scale={[0.44, 0.45, 0.44]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane006.geometry}
+        material={nodes.Plane006.material}
+        position={[-0.03, 0.38, 0.08]}
+        scale={[0.45, 0.45, 0.45]}
+      />
+      <group position={[-0.03, 0.38, 0.08]} scale={[0.45, 0.45, 0.45]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane010_1.geometry}
+          material={nodes.Plane010_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane010_2.geometry}
+          material={materials["Material.003"]}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane.geometry}
+        material={nodes.Plane.material}
+        position={[-0.82, 2.94, -1.51]}
+        scale={[0.45, 0.45, 0.45]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cylinder001.geometry}
+        material={nodes.Cylinder001.material}
+        position={[-0.11, 2.94, -1.39]}
+        scale={[0.45, 0.45, 0.45]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane008.geometry}
+        material={materials["Material.017"]}
+        position={[0.35, 2.97, -1.37]}
+        scale={[0.45, 0.45, 0.45]}
+      />
+      <group
+        position={[1.32, 1.47, -1.05]}
+        rotation={[0, Math.PI / 9, -Math.PI / 2]}
+        scale={[0.59, 0.59, 0.59]}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane014_1.geometry}
+          material={nodes.Plane014_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane014_2.geometry}
+          material={nodes.Plane014_2.material}
+        />
+      </group>
+      <group
+        position={[1.4, 1.68, -0.39]}
+        rotation={[1.57, 0.09, -1.51]}
+        scale={[0.59, 0.59, 0.59]}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane015_1.geometry}
+          material={nodes.Plane015_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane015_2.geometry}
+          material={nodes.Plane015_2.material}
+        />
+      </group>
+      <group position={[1.36, 0.6, -0.83]} scale={[0.59, 0.59, 0.59]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane015_3.geometry}
+          material={nodes.Plane015_3.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane015_4.geometry}
+          material={nodes.Plane015_4.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane011.geometry}
+        material={nodes.Plane011.material}
+        position={[1.11, 1.18, -1.02]}
+        scale={[0.45, 0.45, 0.45]}
+      />
+      <group
+        position={[1.11, 1.19, -1.02]}
+        rotation={[0, 0, 0.07]}
+        scale={[0.46, 0.46, 0.45]}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane017_1.geometry}
+          material={nodes.Plane017_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane017_2.geometry}
+          material={nodes.Plane017_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane013.geometry}
+        material={nodes.Plane013.material}
+        position={[1.36, 0.6, -0.83]}
+        scale={[0.59, 0.59, 0.59]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane014.geometry}
+        material={nodes.Plane014.material}
+        position={[1.36, 0.6, -0.83]}
+        scale={[0.59, 0.59, 0.59]}
+      />
+      <group position={[1.28, 0.6, -0.32]} scale={[1.52, 1.52, 1.52]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane021_1.geometry}
+          material={nodes.Plane021_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane021_2.geometry}
+          material={materials.Material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Circle002.geometry}
+        material={nodes.Circle002.material}
+        position={[-1.3, 0.61, -1.21]}
+        scale={[0.26, 0.26, 0.26]}
+      />
+      <group position={[-1.3, 0.61, -1.21]} scale={[0.26, 0.26, 0.26]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle003_1.geometry}
+          material={nodes.Circle003_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle003_2.geometry}
+          material={nodes.Circle003_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Torus.geometry}
+        material={nodes.Torus.material}
+        position={[0.12, 2.92, -1.39]}
+        scale={[0.88, 0.88, 0.88]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Circle004.geometry}
+        material={nodes.Circle004.material}
+        position={[1.55, 2.35, -0.96]}
+        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
+        scale={[0.2, 0.2, 0.2]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane017.geometry}
+        material={nodes.Plane017.material}
+        position={[1.3, 0.69, 1.16]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Vert.geometry}
+        material={nodes.Vert.material}
+        position={[1.19, 1.2, -0.68]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cylinder002.geometry}
+        material={nodes.Cylinder002.material}
+        position={[1.3, 0.69, 1.16]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane018.geometry}
+        material={nodes.Plane018.material}
+        position={[0.38, 1.01, -0.76]}
+        scale={[0.36, 0.36, 0.36]}
+      />
+      <group position={[0.38, 1.01, -0.76]} scale={[0.36, 0.36, 0.36]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane004_1.geometry}
+          material={nodes.Plane004_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane004_2.geometry}
+          material={nodes.Plane004_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane020.geometry}
+        material={nodes.Plane020.material}
+        position={[0.38, 1.01, -0.76]}
+        scale={[1.1, 1.1, 1.1]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane021.geometry}
+        material={nodes.Plane021.material}
+        position={[0.41, 1.02, -0.76]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Circle005.geometry}
+        material={nodes.Circle005.material}
+        position={[0.38, 1.04, -0.76]}
+        scale={[0.1, 0.1, 0.1]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane022.geometry}
+        material={nodes.Plane022.material}
+        position={[0.38, 0.72, -0.76]}
+        rotation={[1.66, 0, 0]}
+        scale={[0.2, 0.2, 0.2]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane023.geometry}
+        material={nodes.Plane023.material}
+        position={[-0.03, 0.38, 0.08]}
+        scale={[0.45, 0.45, 0.45]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Circle006.geometry}
+        material={nodes.Circle006.material}
+        position={[0.38, 0.65, -0.76]}
+        rotation={[Math.PI / 2, 0, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Circle007.geometry}
+        material={nodes.Circle007.material}
+        position={[0.38, 0.66, -0.76]}
+        rotation={[Math.PI / 2, 0, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane024.geometry}
+        material={nodes.Plane024.material}
+        position={[-0.43, 0.61, -1.28]}
+        scale={[0.2, 0.2, 0.2]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Circle008.geometry}
+        material={nodes.Circle008.material}
+        position={[1.01, 0.81, -0.32]}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={[0.5, 0.5, 0.5]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane025.geometry}
+        material={materials["Material.016"]}
+        position={[-0.03, 0.38, 0.08]}
+        scale={[0.45, 0.45, 0.45]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane026.geometry}
+        material={nodes.Plane026.material}
+        position={[1.22, 0.85, -0.22]}
+        scale={[0.1, 0.1, 0.1]}
+      />
+      <group position={[0.87, 2.07, -1.36]} scale={[0.1, 0.1, 0.1]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle009_1.geometry}
+          material={nodes.Circle009_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle009_2.geometry}
+          material={nodes.Circle009_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane027.geometry}
+        material={nodes.Plane027.material}
+        position={[0.86, 2.07, -1.37]}
+      />
+      <group position={[1.1, 2.07, -1.37]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane028_1.geometry}
+          material={nodes.Plane028_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane028_2.geometry}
+          material={nodes.Plane028_2.material}
+        />
+      </group>
+      <group position={[1.17, 2.08, -1.37]} rotation={[0, 0, -0.26]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane029_1.geometry}
+          material={nodes.Plane029_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane029_2.geometry}
+          material={nodes.Plane029_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane030.geometry}
+        material={nodes.Plane030.material}
+        position={[1.31, 2.07, -1.32]}
+        rotation={[Math.PI, 0, Math.PI]}
+      />
+      <group position={[1.38, 2.07, -1.37]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane031_1.geometry}
+          material={nodes.Plane031_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane031_2.geometry}
+          material={nodes.Plane031_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane032.geometry}
+        material={nodes.Plane032.material}
+        position={[1.45, 2.07, -1.37]}
+      />
+      <group position={[1.27, 2.43, -1.37]} rotation={[0, 0, -0.26]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane034_1.geometry}
+          material={nodes.Plane034_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane034_2.geometry}
+          material={nodes.Plane034_2.material}
+        />
+      </group>
+      <group position={[1.41, 2.42, -1.32]} rotation={[Math.PI, 0, Math.PI]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane035_1.geometry}
+          material={nodes.Plane035_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane035_2.geometry}
+          material={nodes.Plane035_2.material}
+        />
+      </group>
+      <group position={[1.48, 2.42, -1.32]} rotation={[Math.PI, 0, Math.PI]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane036_1.geometry}
+          material={nodes.Plane036_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane036_2.geometry}
+          material={nodes.Plane036_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane038.geometry}
+        material={nodes.Plane038.material}
+        position={[-0.43, 1.16, -1.28]}
+        scale={[0.05, 0.1, 0.1]}
+      />
+      <group position={[1.31, 0.77, 0.75]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane041_1.geometry}
+          material={nodes.Plane041_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane041_2.geometry}
+          material={nodes.Plane041_2.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane041_3.geometry}
+          material={nodes.Plane041_3.material}
+        />
+      </group>
+      <group position={[1.3, 1.9, 0.77]} scale={[0.1, 0.1, 0.1]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle010_1.geometry}
+          material={nodes.Circle010_1.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Circle010_2.geometry}
+          material={nodes.Circle010_2.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane033.geometry}
+        material={nodes.Plane033.material}
+        position={[1.3, 2.12, 0.79]}
+        scale={[0.03, 0.05, 0.05]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane040.geometry}
+        material={nodes.Plane040.material}
+        position={[1.08, 1.18, -0.27]}
+        scale={[0.1, 0.1, 0.1]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane041.geometry}
+        material={nodes.Plane041.material}
+        position={[1.08, 1.18, -0.27]}
+        rotation={[Math.PI, -1.22, Math.PI]}
+        scale={[0.1, 0.1, 0.1]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Cube001.geometry}
+        material={nodes.Cube001.material}
+        position={[1.1, 1.52, -0.33]}
+        scale={[0.03, 0.03, 0.03]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane042.geometry}
+        material={nodes.Plane042.material}
+        position={[1.27, 0.77, 1]}
+        rotation={[0, -Math.PI / 4, 0]}
+        scale={[1.2, 1, 1.2]}
+      />
+      <group
+        position={[1.17, 1.94, 1.09]}
+        rotation={[Math.PI, 0, -Math.PI / 2]}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane035_3.geometry}
+          material={nodes.Plane035_3.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane035_4.geometry}
+          material={nodes.Plane035_4.material}
+        />
+      </group>
+      <group
+        position={[1.17, 2.01, 1.09]}
+        rotation={[Math.PI, 0.26, -Math.PI / 2]}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane035_5.geometry}
+          material={nodes.Plane035_5.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Plane035_6.geometry}
+          material={nodes.Plane035_6.material}
+        />
+      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane045.geometry}
+        material={nodes.Plane045.material}
+        position={[1.2, 1.5, 0.85]}
+        rotation={[0, 0, -Math.PI / 9]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane046.geometry}
+        material={nodes.Plane046.material}
+        position={[1.25, 1.6, 0.85]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane048.geometry}
+        material={nodes.Plane048.material}
+        position={[1.26, 1.6, 1.26]}
+        rotation={[0, 0.83, 0]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane047.geometry}
+        material={nodes.Plane047.material}
+        position={[1.22, 1.5, 1.3]}
+        rotation={[0, 0.83, -Math.PI / 9]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Vert002.geometry}
+        material={nodes.Vert002.material}
+        position={[1.08, 1.29, -0.27]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plane049.geometry}
+        material={materials["Material.014"]}
+        scale={[16.5, 16.5, 16.5]}
+      />
     </group>
   );
 }
 
-useGLTF.preload("/isometric.gltf");
+useGLTF.preload("/isometric.glb");
