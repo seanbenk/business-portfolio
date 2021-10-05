@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { isMobile } from "react-device-detect";
 
 import * as styles from "./index.module.scss";
@@ -6,11 +6,17 @@ import * as styles from "./index.module.scss";
 import AppCanvas from "../components/model/AppCanvas";
 
 const IndexPage = () => {
+  const [device, setDevice] = useState();
+  useEffect(() => {
+    setDevice(isMobile ? "mobile" : "desktop");
+  });
   return (
     <main
-      className={isMobile ? styles.mobileContainer : styles.desktopContainer}
+      className={
+        device === "mobile" ? styles.mobileContainer : styles.desktopContainer
+      }
     >
-      <h1>Sean Benkenstein {isMobile ? "Mobile" : "Desktop"}</h1>
+      <h1>Sean Benkenstein {device === "mobile" ? "Mobile" : "Desktop"}</h1>
       <AppCanvas />
     </main>
   );
