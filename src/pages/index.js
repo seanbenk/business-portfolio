@@ -9,11 +9,11 @@ const IndexPage = () => {
   const [device, setDevice] = useState();
   useEffect(() => {
     setDevice(isMobile ? "mobile" : "desktop");
-  });
+  }, []);
   return (
     <main
       className={
-        device === "mobile" ? styles.mobileContainer : styles.desktopContainer
+        device !== "mobile" ? styles.desktopContainer : styles.mobileContainer
       }
     >
       <h1>Sean Benkenstein {device === "mobile" ? "Mobile" : "Desktop"}</h1>
