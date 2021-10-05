@@ -1,12 +1,16 @@
 import React from "react";
-import "react-multi-carousel/lib/styles.css";
+import { isMobile } from "react-device-detect";
+
 import * as styles from "./index.module.scss";
 
 import AppCanvas from "../components/model/AppCanvas";
 
 const IndexPage = () => {
   return (
-    <main className={styles.container}>
+    <main
+      className={isMobile ? styles.mobileContainer : styles.desktopContainer}
+    >
+      <h1>Sean Benkenstein</h1>
       <AppCanvas />
     </main>
   );
