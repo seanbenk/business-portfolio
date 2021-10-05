@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
 import * as styles from "./index.module.scss";
