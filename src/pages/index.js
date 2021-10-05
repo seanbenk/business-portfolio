@@ -10,7 +10,7 @@ const IndexPage = () => {
     <main
       className={isMobile ? styles.mobileContainer : styles.desktopContainer}
     >
-      <h1>Sean Benkenstein</h1>
+      <h1>Sean Benkenstein {isMobile ? "Mobile" : "Desktop"}</h1>
       <AppCanvas />
     </main>
   );
