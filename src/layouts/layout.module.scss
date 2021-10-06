@@ -3,7 +3,5 @@
 .container {
   min-height: 100vh;
   background-color: $secondary;
-  margin: 0;
-  display: flex;
-  flex-flow: column;
+  position: relative;
 }

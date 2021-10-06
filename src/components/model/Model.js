@@ -26,7 +26,6 @@ export default function Model(props) {
   // nodes.Circle004.material.emissive = 0xffffff;
   nodes.Circle004.material.emissiveIntensity = 3;
   nodes.Circle004.material.emissive = { r: 80, g: 180, b: 230 };
-  console.log(nodes.Circle004.material);
 
   return (
     <group ref={group} {...props} dispose={null}>

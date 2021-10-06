@@ -24,9 +24,12 @@ function AppCanvas(props) {
       }}
       dpr={isBrowser ? Math.max(window.devicePixelRatio, 2) : null}
       shadows
+      onCreated={({ camera }) => {
+        camera.lookAt(0, 1, 0);
+      }}
     >
-      <PerspectiveCamera makeDefault position={[-3.1, 3.5, 3]} zoom={0.6} />
-      <OrbitControls target={[0, 1, 0]} position={[-3.1, 3.5, 3]} ref={ref} />
+      <PerspectiveCamera makeDefault position={[-3, 3.5, 4]} zoom={0.5} />
+      {/* <OrbitControls target={[0, 1, 0]} position={[-3.1, 3.5, 3]} ref={ref} /> */}
       <Suspense fallback={<Loader />}>
         {/* <ambientLight intensity={0.1} /> */}
         <Model />

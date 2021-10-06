@@ -6,7 +6,7 @@ import * as styles from "./layout.module.scss";
 function Layout({ children }) {
   return (
     <div className={styles.container}>
-      {/* <Nav /> */}
+      <Nav />
       {children}
     </div>
   );

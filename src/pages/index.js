@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { isMobile } from "react-device-detect";
 
 import * as styles from "./index.module.scss";
-
+import Section from "../components/Section";
 import AppCanvas from "../components/model/AppCanvas";
 
 const IndexPage = () => {
@@ -11,13 +11,22 @@ const IndexPage = () => {
     setDevice(isMobile ? "mobile" : "desktop");
   }, []);
   return (
-    <main
-      className={
-        device !== "mobile" ? styles.desktopContainer : styles.mobileContainer
-      }
-    >
-      <h1>Sean Benkenstein {device === "mobile" ? "Mobile" : "Desktop"}</h1>
-      <AppCanvas />
+    <main>
+      <Section
+        className={
+          device !== "mobile" ? styles.desktopContainer : styles.mobileContainer
+        }
+        id="home"
+      >
+        <h1>Sean Benkenstein {device === "mobile" ? "Mobile" : "Desktop"}</h1>
+        <AppCanvas />
+      </Section>
+      <Section id="about">
+        <h1>About section</h1>
+      </Section>
+      <Section id="contact">
+        <h1>Contact section</h1>
+      </Section>
     </main>
   );
 };
