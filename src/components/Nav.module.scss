@@ -1,15 +1,17 @@
-@import "../colors.scss";
+@import "../config.scss";
 
 .desktopContainer {
-  width: 100%;
+  max-width: 100%;
   height: 8vh;
-  background-color: black;
-  display: flex;
-  align-items: center;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   margin-top: 92vh;
+  padding-left: 50px;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  z-index: 5;
 }
 
 .mobileContainer {
@@ -20,15 +22,15 @@
   align-items: center;
   position: fixed;
   top: 0;
+  z-index: 5;
 }
 
 .link {
-  color: $primary;
+  color: $light;
   font-size: 2rem;
   text-decoration: none;
   margin-left: 30px;
-  font-family: "Helvetica";
-  color: $primary;
+  font-family: $roboto;
   transition: all 250ms linear;
   &:hover {
     cursor: pointer;
@@ -36,5 +38,5 @@
 }
 
 .active {
-  color: red;
+  color: $highlight;
 }
