@@ -19,7 +19,11 @@ function Nav(props) {
         left: 0,
       }}
     >
-      <nav className={styles.container}>
+      <nav
+        className={
+          device === "mobile" ? styles.mobileContainer : styles.desktopContainer
+        }
+      >
         <A to="home" className={styles.link} activeClass={styles.active}>
           Home
         </A>
