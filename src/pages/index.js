@@ -4,6 +4,7 @@ import * as styles from "./index.module.scss";
 
 import Home from "../components/pages/Home";
 import About from "../components/pages/About";
+import Projects from "../components/pages/Projects";
 import Contact from "../components/pages/Contact";
 
 const IndexPage = () => {
@@ -11,6 +12,7 @@ const IndexPage = () => {
     <main>
       <Home />
       <About />
+      <Projects />
       <Contact />
     </main>
   );
@@ -37,31 +39,3 @@ export default IndexPage;
 //     items: 1,
 //   },
 // };
-
-// const data = [
-//   {
-//     title: "Starwars",
-//     description: "https://github.com/seanbenk/starwars",
-//     image: require("../images/starwars.png"),
-//   },
-//   {
-//     title: "Path Finder",
-//     description: "https://github.com/seanbenk/path-finder",
-//     image: require("../images/pathfinder.png"),
-//   },
-//   {
-//     title: "Widget App",
-//     description: "https://github.com/seanbenk/Widget_app",
-//     image: require("../images/widgets.png"),
-//   },
-//   {
-//     title: "Tic Tac Toe",
-//     description: "https://github.com/seanbenk/tictactoe",
-//     image: require("../images/tictactoe.png"),
-//   },
-//   {
-//     title: "Flappy Duck",
-//     description: "https://github.com/seanbenk/flappyduck",
-//     image: require("../images/flappyduck.png"),
-//   },
-// ];

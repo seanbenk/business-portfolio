@@ -18,9 +18,17 @@ function Home(props) {
       }
       id="home"
     >
-      <h1>Sean Benkenstein</h1>
-      <div className={styles.canvas}>
-        <AppCanvas />
+      <div>
+        <h1>Sean Benkenstein</h1>
+        <h2>web development</h2>
+        {/* <h2>web solutions</h2>
+        <h2>fullstack development</h2> */}
+      </div>
+      <div className={styles.videoContainer}>
+        {/* <AppCanvas /> */}
+        <video autoPlay muted loop className={styles.video}>
+          <source src="/images/room.mp4" type="video/mp4" />
+        </video>
       </div>
     </Section>
   );

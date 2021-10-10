@@ -1,7 +1,7 @@
 @import "../../config.scss";
 
 .desktopContainer {
-  background-color: $secondary;
+  background-color: $primary;
   display: grid;
   place-items: center;
   grid-template-columns: 2fr 3fr;
@@ -11,7 +11,17 @@
     font-family: $arvo;
     font-style: italic;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 5rem;
+    padding: 0 20px;
+    margin: 0;
+  }
+  h2 {
+    color: $light;
+    font-family: $montserrat;
+    font-weight: 200;
+    font-style: italic;
+    padding: 0 30px;
+    margin: 0;
   }
 }
 
@@ -25,12 +35,19 @@
   }
 }
 
-.canvas {
+.videoContainer {
   background-color: $primary;
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  // display: flex;
+  // justify-items: center;
+  // align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.video {
+  display: block;
   height: 100%;
   width: 100%;
-  position: relative;
+  object-fit: cover;
+  object-position: center center;
 }

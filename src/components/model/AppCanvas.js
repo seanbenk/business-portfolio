@@ -1,6 +1,7 @@
-import React, { Suspense, useRef } from "react";
+import React, { Suspense, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
+import { useSpring, animated } from "@react-spring/three";
 
 import Model from "./Model";
 import AppSpotLight from "./AppSpotLight";
@@ -9,7 +10,8 @@ import Loader from "./Loader";
 function AppCanvas(props) {
   const isBrowser = typeof window !== "undefined";
   const ref = useRef();
-
+  const [active, setActive] = useState(false);
+  const { scale } = useSpring({ scale: active ? 1.5 : 1 });
   return (
     // <>
     //   <button onClick={() => console.log(ref.current.object.position)}>
@@ -32,7 +34,11 @@ function AppCanvas(props) {
       {/* <OrbitControls target={[0, 1, 0]} position={[-3.1, 3.5, 3]} ref={ref} /> */}
       <Suspense fallback={<Loader />}>
         {/* <ambientLight intensity={0.1} /> */}
-        <Model />
+        {/* <Model /> */}
+        <animated.mesh scale={scale} onClick={() => setActive(!active)}>
+          <boxGeometry />
+          <meshPhongMaterial color="royalblue" />
+        </animated.mesh>
       </Suspense>
       <directionalLight
         position={[-3.1, 3.5, 3]}
