@@ -1449,12 +1449,14 @@ var trimResultTransformer = function trimResultTransformer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "desktopContainer": () => (/* binding */ desktopContainer),
+/* harmony export */   "inView": () => (/* binding */ inView),
 /* harmony export */   "mobileContainer": () => (/* binding */ mobileContainer),
 /* harmony export */   "link": () => (/* binding */ link),
 /* harmony export */   "active": () => (/* binding */ active)
 /* harmony export */ });
 // Exports
 var desktopContainer = "Nav-module--desktopContainer--1NU_-";
+var inView = "Nav-module--inView--2PzjR";
 var mobileContainer = "Nav-module--mobileContainer--1loeX";
 var link = "Nav-module--link--1ml_p";
 var active = "Nav-module--active--2cgcY";
@@ -2095,12 +2097,8 @@ function Nav(props) {
     0: device,
     1: setDevice
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)();
-  const {
-    ref,
-    inView,
-    entry
-  } = (0,react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__.useInView)({
-    threshold: 1
+  const [inViewRef, inView, entry] = (0,react_intersection_observer__WEBPACK_IMPORTED_MODULE_4__.useInView)({
+    threshold: 0
   });
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     setDevice(react_device_detect__WEBPACK_IMPORTED_MODULE_1__.isMobile ? "mobile" : "desktop");
@@ -2114,8 +2112,11 @@ function Nav(props) {
       left: 0,
       pointerEvents: "none"
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
-    className: device === "mobile" ? _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.mobileContainer : _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.desktopContainer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "nav-container-top",
+    ref: inViewRef
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
+    className: `${device === "mobile" ? _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.mobileContainer : _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.desktopContainer} ${inView ? "" : _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.inView}`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_A__WEBPACK_IMPORTED_MODULE_2__["default"], {
     to: "home",
     className: _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.link,
@@ -2133,7 +2134,9 @@ function Nav(props) {
     className: _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.link,
     activeClass: _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.active
   }, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_A__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    to: "home"
+    to: "home",
+    className: _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.link,
+    activeClass: _Nav_module_scss__WEBPACK_IMPORTED_MODULE_3__.active
   }, inView)));
 }
 

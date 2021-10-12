@@ -3,10 +3,14 @@
 .container {
   background-color: $white;
   padding: 0 5%;
-}
-
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-height: 100%;
+  max-width: 100%;
+  h2 {
+    color: $primary;
+    font-family: $montserrat;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0;
+    padding: 10vh;
+  }
 }
