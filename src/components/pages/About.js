@@ -41,20 +41,36 @@ const svgs = [
 
 function About(props) {
   return (
-    <Section id="about" className={styles.desktopContainer} fixedHeight={false}>
-      <h2>Services We Offer</h2>
-      <ul>
-        {svgs.map((svg, idx) => (
-          <Fade left cascade key={idx} delay={200 * idx}>
-            <li className={styles.iconContainer}>
-              <img src={svg.src} alt={svg.alt} />
-              <h2>{svg.title}</h2>
-            </li>
-          </Fade>
-        ))}
-      </ul>
-      {/* <h1>About section</h1> */}
-    </Section>
+    <>
+      <Section
+        id="about"
+        className={`${styles.desktopContainer} ${styles.topAboutSection}`}
+      >
+        <div>
+          <img src="/images/profile_image.png" />
+        </div>
+        <div>
+          <h1>Hi there!</h1>
+          <h2>
+            I'm Sean, a software engineer and web developer from Sydney,
+            Australia!
+          </h2>
+        </div>
+      </Section>
+      <Section className={styles.desktopContainer} fixedHeight={false}>
+        <h2>Services We Offer</h2>
+        <ul>
+          {svgs.map((svg, idx) => (
+            <Fade left cascade key={idx} delay={200 * idx}>
+              <li className={styles.iconContainer}>
+                <img src={svg.src} alt={svg.alt} />
+                <h2>{svg.title}</h2>
+              </li>
+            </Fade>
+          ))}
+        </ul>
+      </Section>
+    </>
   );
 }
 

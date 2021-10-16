@@ -13,12 +13,47 @@
     padding: 0;
     padding-bottom: 4vh;
   }
+  img {
+    height: 30vh;
+    width: 30vh;
+    border-radius: 30vh;
+    object-fit: cover;
+  }
   ul {
     width: 90%;
     display: grid;
     place-items: center;
     row-gap: 5vh;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.topAboutSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    img {
+      height: 30vh;
+      width: 30vh;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  h1 {
+    font-family: $arvo;
+  }
+  h2 {
+    font-family: $lato;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 4vh;
   }
 }
 
