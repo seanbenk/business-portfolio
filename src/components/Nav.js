@@ -7,46 +7,32 @@ import * as styles from "./Nav.module.scss";
 
 function Nav(props) {
   const [device, setDevice] = useState();
-  const [inViewRef, inView, entry] = useInView({
-    threshold: 0,
-  });
   useEffect(() => {
     setDevice(isMobile ? "mobile" : "desktop");
   }, []);
   return (
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        pointerEvents: "none",
-      }}
+    <nav
+      className={`${
+        device === "mobile" ? styles.mobileContainer : styles.desktopContainer
+      }`}
     >
-      <div id="nav-container-top" ref={inViewRef}></div>
-      <nav
-        className={`${
-          device === "mobile" ? styles.mobileContainer : styles.desktopContainer
-        } ${inView ? "" : styles.inView}`}
-      >
-        <A to="home" className={styles.link} activeClass={styles.active}>
-          Home
-        </A>
-        <A to="about" className={styles.link} activeClass={styles.active}>
-          About
-        </A>
-        <A to="projects" className={styles.link} activeClass={styles.active}>
-          Projects
-        </A>
-        <A to="contact" className={styles.link} activeClass={styles.active}>
-          Contact
-        </A>
-        <A to="home" className={styles.link} activeClass={styles.active}>
-          {inView}
-        </A>
-      </nav>
-    </div>
+      <A to="home" className={styles.link} activeClass={styles.active}>
+        Home
+      </A>
+      <A to="about" className={styles.link} activeClass={styles.active}>
+        About
+      </A>
+      <A to="services" className={styles.link} activeClass={styles.active}>
+        Services
+      </A>
+      <A to="projects" className={styles.link} activeClass={styles.active}>
+        Projects
+      </A>
+      <A to="contact" className={styles.link} activeClass={styles.active}>
+        Contact
+      </A>
+      <A to="home" className={styles.link} activeClass={styles.active}></A>
+    </nav>
   );
 }
 

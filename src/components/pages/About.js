@@ -5,72 +5,45 @@ import * as styles from "./About.module.scss";
 
 import Section from "../Section";
 
-const svgs = [
-  {
-    src: "/static/australia_house_opera_icon.svg",
-    alt: "an icon",
-    title: "100% Australian Based out of Sydney",
-  },
-  {
-    src: "/static/chat_group_video_icon.svg",
-    alt: "an icon",
-    title: "Constant Line of Communication",
-  },
-  {
-    src: "/static/code_html_website_icon.svg",
-    alt: "an icon",
-    title: "Contempary Front-End Website Design",
-  },
-  {
-    src: "/static/control_gears_process_icon.svg",
-    alt: "an icon",
-    title: "Efficient Server Side Construction",
-  },
-  {
-    src: "/static/dashboard_speed_speedometer_icon.svg",
-    alt: "an icon",
-    title: "Fast Reliable Speeds",
-  },
-  {
-    src: "/static/achievement_award_badge_icon.svg",
-    alt: "an icon",
-    title: "Garuanteed Customer Satisfaction",
-  },
-  //   { src: "/static/devices_laptop_mobile_icon.svg", alt: "an icon" },
-];
-
 function About(props) {
   return (
-    <>
-      <Section
-        id="about"
-        className={`${styles.desktopContainer} ${styles.topAboutSection}`}
-      >
-        <div>
+    <Section id="about" className={`${styles.desktopContainer}`}>
+      <Fade>
+        <div className={styles.imageDiv}>
           <img src="/images/profile_image.png" />
         </div>
-        <div>
+      </Fade>
+      <Fade>
+        <div className={styles.textDiv}>
+          <img
+            src="/static/harbour-bridge.svg"
+            alt="harbour bridge"
+            style={{
+              position: "absolute",
+              height: "30vh",
+              width: "30vh",
+              right: "6vw",
+              bottom: "-60%",
+            }}
+          />
           <h1>Hi there!</h1>
-          <h2>
+          <p>
             I'm Sean, a software engineer and web developer from Sydney,
-            Australia!
-          </h2>
+            Australia. I have spent the last 3 years studying and rifining my
+            skills in coding, problem solving and delivering beautiful
+            solutions.
+          </p>
+          <p>
+            I have graduated from the Software Engineering bootcamp at General
+            Assembly where I collected an additional 500 hours of experience,
+            and what's even better is I got invited to come back and jump on
+            board as an instructor! I am always looking for my next big
+            opportunity to grow and work with great people on fun projects, so
+            don't be afraid to reach out and contact me!
+          </p>
         </div>
-      </Section>
-      <Section className={styles.desktopContainer} fixedHeight={false}>
-        <h2>Services We Offer</h2>
-        <ul>
-          {svgs.map((svg, idx) => (
-            <Fade left cascade key={idx} delay={200 * idx}>
-              <li className={styles.iconContainer}>
-                <img src={svg.src} alt={svg.alt} />
-                <h2>{svg.title}</h2>
-              </li>
-            </Fade>
-          ))}
-        </ul>
-      </Section>
-    </>
+      </Fade>
+    </Section>
   );
 }
 

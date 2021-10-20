@@ -1,9 +1,11 @@
 import React from "react";
+import Nav from "../components/Nav";
 
 import * as styles from "./index.module.scss";
 
 import Home from "../components/pages/Home";
 import About from "../components/pages/About";
+import Services from "../components/pages/Services";
 import Projects from "../components/pages/Projects";
 import Contact from "../components/pages/Contact";
 
@@ -11,7 +13,9 @@ const IndexPage = () => {
   return (
     <main>
       <Home />
+      <Nav />
       <About />
+      <Services />
       <Projects />
       <Contact />
     </main>

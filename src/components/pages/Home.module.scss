@@ -3,25 +3,32 @@
 .desktopContainer {
   background-color: $primary;
   display: grid;
-  place-items: center;
+  place-content: center;
   grid-template-columns: 2fr 3fr;
   max-width: 100vw;
-  h1 {
-    color: $light;
-    font-family: $arvo;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 5rem;
-    padding: 0 20px;
-    margin: 0;
-  }
-  h2 {
-    color: $light;
-    font-family: $montserrat;
-    font-weight: 200;
-    font-style: italic;
-    padding: 0 50px;
-    margin: 0;
+  div {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      color: $light;
+      font-family: $arvo;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 4rem;
+      padding: 0 20px;
+      margin: 0;
+    }
+    h2 {
+      color: $light;
+      font-family: $montserrat;
+      font-weight: 200;
+      font-style: italic;
+      padding: 0 50px;
+      margin: 0;
+    }
   }
 }
 
@@ -50,4 +57,22 @@
   width: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+.link {
+  color: $light;
+  font-size: 3rem;
+  text-decoration: none;
+  font-family: $montserrat;
+  transition: color 250ms linear;
+  position: absolute;
+  bottom: 5vh;
+  align-self: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: $highlight;
 }

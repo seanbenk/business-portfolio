@@ -7,17 +7,13 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin-top: 92vh;
-  padding-left: 50px;
-  background-color: none;
+  // padding-left: 50px;
+  background-color: $primary;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   z-index: 5;
-  transition: background-color 100ms ease-in;
-}
-
-.inView {
-  background-color: $primary;
+  transition: all 100ms ease-in;
 }
 
 .mobileContainer {
@@ -34,7 +30,7 @@
 
 .link {
   color: $light;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   margin-left: 30px;
   font-family: $montserrat;
@@ -45,5 +41,5 @@
 }
 
 .active {
-  color: $highlight;
+  color: $purpleWhite;
 }
