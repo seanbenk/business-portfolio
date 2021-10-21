@@ -1,1 +1,33 @@
 @import "../../config.scss";
+
+.desktopContainer {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+.contactItemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4vh;
+  a {
+    font-family: $arvo;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $dark;
+    padding: 2vw;
+  }
+  img {
+    height: 10vh;
+    width: 10vh;
+  }
+}

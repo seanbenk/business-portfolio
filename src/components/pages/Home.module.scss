@@ -68,11 +68,26 @@
   position: absolute;
   bottom: 5vh;
   align-self: center;
+  animation: levitate 2.5s infinite linear;
+  transition: all 200ms linear;
   &:hover {
     cursor: pointer;
+    transform: scale(1.2);
   }
 }
 
 .active {
   color: $highlight;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(-2vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

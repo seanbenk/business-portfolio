@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+.card {
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  -webkit-box-shadow: 0px 4px 12px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.activeCard {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.unActiveCard {
+  opacity: 0.5;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.arrow {
+  color: #0c0032;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  font-size: 3rem;
+  -webkit-transition: color 200ms ease-in;
+  transition: color 200ms ease-in;
+}
+
+.arrow:hover {
+  color: #3500d3;
+}
+
+.leftArrow {
+  top: 50%;
+  left: 0%;
+}
+
+.rightArrow {
+  top: 50%;
+  right: 0%;
+}
+/*# sourceMappingURL=ProjectsSlider.module.css.map */

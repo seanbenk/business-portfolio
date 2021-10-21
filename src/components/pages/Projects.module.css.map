@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,mGAAI;AACZ,OAAO,CAAC,sFAAI;AACZ,OAAO,CAAC,gFAAI;AACZ,OAAO,CAAC,qHAAI;ADDZ,AAAA,UAAU,CAAC;EACT,gBAAgB,ECgBV,OAAO;EDfb,OAAO,EAAE,IAAI;CASd;;AAXD,AAGE,UAHQ,CAGR,EAAE,CAAC;EACD,KAAK,ECMC,OAAO;EDLb,WAAW,ECEF,YAAY,EAAE,UAAU;EDDjC,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,IAAI;CACd",
+    "sources": [
+        "Projects.module.scss",
+        "../../config.scss"
+    ],
+    "names": [],
+    "file": "Projects.module.css"
+}
