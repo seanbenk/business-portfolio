@@ -6,6 +6,7 @@ import * as styles from "./index.module.scss";
 import Home from "../components/pages/Home";
 import About from "../components/pages/About";
 import Services from "../components/pages/Services";
+import TechStack from "../components/pages/TechStack";
 import Projects from "../components/pages/Projects";
 import Contact from "../components/pages/Contact";
 
@@ -15,6 +16,7 @@ const IndexPage = () => {
       <Home />
       <Nav />
       <About />
+      <TechStack />
       <Services />
       <Projects />
       <Contact />

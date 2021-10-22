@@ -2,7 +2,8 @@
 
 .container {
   background-color: $white;
-  padding: 0 5%;
+  padding-top: 20vh;
+  min-height: 100vh;
   h2 {
     color: $primary;
     font-family: $montserrat;
