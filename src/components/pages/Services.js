@@ -40,10 +40,7 @@ const svgs = [
 
 function Services(props) {
   return (
-    <Section
-      id="services"
-      className={`${styles.desktopContainer} ${styles.offerSection}`}
-    >
+    <Section id="services" className={`${styles.desktopContainer}`}>
       <h1>What I Offer</h1>
       <ul>
         {svgs.map((svg, idx) => (

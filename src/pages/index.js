@@ -1,7 +1,11 @@
-import React from "react";
-import Nav from "../components/Nav";
+import React, { useState } from "react";
+import { MobileView, BrowserView } from "react-device-detect";
+import { slide as Menu } from "react-burger-menu";
+import Nav from "../components/Navs/Nav";
+import NavMobile from "../components/Navs/NavMobile";
 
 import * as styles from "./index.module.scss";
+import "./Nav.css";
 
 import Home from "../components/pages/Home";
 import About from "../components/pages/About";
@@ -11,15 +15,31 @@ import Projects from "../components/pages/Projects";
 import Contact from "../components/pages/Contact";
 
 const IndexPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const openMenu = () => setIsOpen(true);
+  const closeMenu = () => setIsOpen(false);
   return (
     <main>
-      <Home />
-      <Nav />
-      <About />
-      <TechStack />
-      <Projects />
-      <Services />
-      <Contact />
+      <BrowserView>
+        <Home />
+        <Nav />
+        <About />
+        <TechStack />
+        <Projects />
+        <Services />
+        <Contact />
+      </BrowserView>
+      <MobileView>
+        <Menu isOpen={isOpen} onOpen={openMenu} onClose={closeMenu}>
+          <NavMobile closeMenu={closeMenu} />
+        </Menu>
+        <Home />
+        <About />
+        <TechStack />
+        <Projects />
+        <Services />
+        <Contact />
+      </MobileView>
     </main>
   );
 };

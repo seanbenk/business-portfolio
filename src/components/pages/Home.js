@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { isMobile } from "react-device-detect";
-import A from "../A";
+import A from "../Navs/A";
 
 import * as styles from "./Home.module.scss";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
-function A({ to = "home", children, className, activeClass }) {
+function A({ to = "home", children, className, activeClass, onClick }) {
   return (
     <Link
       className={className}
@@ -11,6 +11,7 @@ function A({ to = "home", children, className, activeClass }) {
       smooth={true}
       //   offset={-70}
       duration={500}
+      onClick={onClick}
     >
       {children}
     </Link>
