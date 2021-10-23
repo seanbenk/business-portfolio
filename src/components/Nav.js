@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import { Twirl as Hamburger } from "hamburger-react";
 
 import A from "./A";
 import * as styles from "./Nav.module.scss";
 
 function Nav(props) {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
-      <div className={styles.burger}>
-        <div className="burger-one"></div>
-        <div className="burger-two"></div>
-        <div className="burger-three"></div>
-      </div>
+      <Hamburger
+        size={50}
+        toggled={menuOpen}
+        toggle={setMenuOpen}
+        color="#fff"
+        rounded
+      />
       <nav className={styles.container}>
         <A to="home" className={styles.link} activeClass={styles.active}>
           Home
