@@ -28,10 +28,9 @@ function About(props) {
           />
           <h1>Hi there!</h1>
           <p>
-            I'm Sean, a software engineer and web developer from Sydney,
-            Australia. I have spent the last 3 years studying and rifining my
-            skills in coding, problem solving and delivering beautiful
-            solutions.
+            I'm Sean, a software engineer and web developer from Australia. I
+            have spent the last 3 years studying and rifining my skills in
+            coding, problem solving and delivering beautiful solutions.
           </p>
           <p>
             I have graduated from the Software Engineering bootcamp at General

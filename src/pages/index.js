@@ -17,8 +17,8 @@ const IndexPage = () => {
       <Nav />
       <About />
       <TechStack />
-      <Services />
       <Projects />
+      <Services />
       <Contact />
     </main>
   );

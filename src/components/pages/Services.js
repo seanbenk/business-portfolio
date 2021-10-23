@@ -47,7 +47,7 @@ function Services(props) {
       <h1>What I Offer</h1>
       <ul>
         {svgs.map((svg, idx) => (
-          <Fade left cascade key={idx} delay={200 * idx}>
+          <Fade cascade key={idx} delay={200 * idx}>
             <li className={styles.iconContainer}>
               <img src={svg.src} alt={svg.alt} />
               <h2>{svg.title}</h2>

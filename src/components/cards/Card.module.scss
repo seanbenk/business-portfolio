@@ -13,10 +13,19 @@
   font-family: $montserrat;
   transition: all 200ms linear;
   box-shadow: 0px 4px 12px 0 rgba(0, 0, 0, 0.15);
+  h1 {
+    font-family: $montserrat;
+  }
+}
+
+.detailsContainer {
+  text-align: center;
+  padding: 20px;
   div {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    padding: 10px;
   }
 }
 
@@ -26,16 +35,8 @@
   margin: 0 auto;
 }
 
-.details {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: red;
-}
-
-.githubIcon {
+.githubIcon,
+.websiteIcon {
   width: 64px;
   height: 64px;
 }

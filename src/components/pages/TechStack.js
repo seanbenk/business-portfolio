@@ -1,26 +1,33 @@
 import React from "react";
+import { Fade } from "react-reveal";
+
 import Section from "../Section";
 
 import * as styles from "./TechStack.module.scss";
 
 const icons = [
-  { src: "/static/react-icon.svg", alt: "react icon", title: "react native" },
+  { src: "/static/ReactJS.svg", alt: "react icon", title: "react native" },
   { src: "/static/nextjs-icon.svg", alt: "next js icon", title: "next js" },
-  { src: "/static/html5-icon.svg", alt: "html5 icon", title: "html5" },
-  { src: "/static/css3-icon.svg", alt: "css3 icon", title: "css3" },
-  { src: "/static/ruby-icon.svg", alt: "ruby icon", title: "ruby" },
-  { src: "/static/js-icon.svg", alt: "javascript icon", title: "javascript" },
+  { src: "/static/NodeJs.svg", alt: "Node JS icon", title: "Node Js" },
+  { src: "/static/Ruby.svg", alt: "ruby icon", title: "ruby" },
+  { src: "/static/HTML5.svg", alt: "html5 icon", title: "html5" },
+  { src: "/static/CSS3.svg", alt: "css3 icon", title: "css3" },
 ];
 
 function TechStack(props) {
   return (
-    <Section className={styles.container}>
-      {icons.map((icon) => (
-        <div className={styles.iconContainer}>
-          <img src={icon.src} alt={icon.alt} />
-          <h2>{icon.title}</h2>
-        </div>
-      ))}
+    <Section className={styles.container} id="skills">
+      <h1>My Favourite Technologies</h1>
+      <div>
+        {icons.map((icon) => (
+          <Fade>
+            <div className={styles.iconContainer}>
+              <img src={icon.src} alt={icon.alt} />
+              {/* <h2>{icon.title}</h2> */}
+            </div>
+          </Fade>
+        ))}
+      </div>
     </Section>
   );
 }

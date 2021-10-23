@@ -8,7 +8,8 @@
   padding-top: 10vh;
   max-height: fit-content;
   h1 {
-    font-family: $arvo;
+    font-family: $montserrat;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     padding-bottom: 4vh;
@@ -39,6 +40,7 @@
     font-size: 1.2rem;
     color: $dark;
     font-family: $lato;
+    font-weight: 400;
   }
   img {
     padding-left: 10%;
