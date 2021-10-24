@@ -13,7 +13,7 @@ import TechStack from "../components/pages/TechStack";
 import Projects from "../components/pages/Projects";
 import Contact from "../components/pages/Contact";
 
-import menuStyles from "./menuStyles.js";
+import menuStyles from "../components/Navs/menuStyles.js";
 
 const IndexPage = () => {
   const [isOpen, setIsOpen] = useState(false);
