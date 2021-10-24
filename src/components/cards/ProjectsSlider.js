@@ -12,7 +12,7 @@ const projects = [
   {
     title: "Starwars",
     github: "https://github.com/seanbenk/starwars",
-    image: "/images/starwars.png",
+    image: "/static/images/projects/starwars.png",
     description:
       "As part of one of my first coding tests, this application uses Next Js and React to display the details of starwars movies using the startwars API",
     link: "https://radiant-temple-44508.herokuapp.com/",
@@ -20,7 +20,7 @@ const projects = [
   {
     title: "Path Finder",
     github: "https://github.com/seanbenk/path-finder",
-    image: "/images/pathfinder.png",
+    image: "/static/images/projects/pathfinder.png",
     description:
       "This is an app that demonstrates path finding, dijkstra's algorithm is used to find a path from point a to point b. This application was made using react js",
     link: "https://seanbenk.github.io/path-finder/",
@@ -28,7 +28,7 @@ const projects = [
   {
     title: "Widget App",
     github: "https://github.com/seanbenk/Widget_app",
-    image: "/images/widgets.png",
+    image: "/static/images/projects/widgets.png",
     description:
       "Widget Wizards is a group project I worked on with the idea being a dashboard application you can use as your home page in your favourite browser",
     link: "https://widget-wizard.herokuapp.com/",
@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Tic Tac Toe",
     github: "https://github.com/seanbenk/tictactoe",
-    image: "/images/tictactoe.png",
+    image: "/static/images/projects/tictactoe.png",
     description:
       "A simple Tic Tac Toe game you can play against a friend, uses pure html5, css3 and javascript.",
     link: "https://seanbenk.github.io/tictactoe/",
@@ -44,7 +44,7 @@ const projects = [
   // {
   //   title: "Flappy Duck",
   //   github: "https://github.com/seanbenk/flappyduck",
-  //   image: "/images/flappyduck.png",
+  //   image: "/static/images/projects/flappyduck.png",
   //   description:
   //     "a small game I made to demonstrate the power of Phaser, a javascript framework for game design",
   //   link: "https://seanbenk.github.io/flappyduck/",

@@ -35,9 +35,6 @@
 
 .videoContainer {
   background-color: $primary;
-  // display: flex;
-  // justify-items: center;
-  // align-items: center;
   height: 100vh;
   width: 100%;
 }
@@ -98,6 +95,10 @@
     h1 {
       font-size: 3rem;
     }
+  }
+
+  .link {
+    bottom: 15vh;
   }
 
   .videoContainer {

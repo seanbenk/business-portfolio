@@ -5,7 +5,6 @@ import A from "../Navs/A";
 import * as styles from "./Home.module.scss";
 
 import Section from "../Section";
-// import AppCanvas from "../model/AppCanvas";
 
 function Home(props) {
   const [device, setDevice] = useState();
@@ -19,16 +18,15 @@ function Home(props) {
         <h2>web development</h2>
         <A to="about" className={styles.link}>
           <img
-            src="/static/down-arrow.svg"
-            alt={"down arrow"}
+            src="/static/images/down-arrow.svg"
+            alt="down arrow"
             style={{ height: "64px", width: "64px" }}
           />
         </A>
       </div>
       <div className={styles.videoContainer}>
-        {/* <AppCanvas /> */}
         <video autoPlay muted loop className={styles.video}>
-          <source src="/images/room.mp4" type="video/mp4" />
+          <source src="/static/images/room.mp4" type="video/mp4" />
         </video>
       </div>
     </Section>

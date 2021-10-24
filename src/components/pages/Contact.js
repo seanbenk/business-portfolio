@@ -10,27 +10,29 @@ function Contact(props) {
     <Section id="contact" className={styles.container}>
       <div className={styles.contactsWrapper}>
         <ContactItem
-          src="/static/phone-icon.svg"
+          src="/static/images/contact/phone-icon.svg"
           alt="phone icon"
           title="Mobile"
           details="0439000690"
         />
         <ContactItem
-          src="/static/linkedin-icon.svg"
+          src="/static/images/contact/linkedin-icon.svg"
           alt="linked in icon"
           title="LinkedIn"
           details="/in/sean-benkenstein"
           href="https://www.linkedin.com/in/sean-benkenstein/"
         />
         <ContactItem
-          src="/static/gmail-icon.svg"
+          src="/static/images/contact/gmail-icon.svg"
           alt="email icon"
           title="Email"
           details="seanbenkenstein@gmail.com"
           href="mailto:seanbenkenstein@gmail.com"
         />
-        <span>
-          <A to="home">to top</A>
+        <span className={styles.toTop}>
+          <A to="home">
+            <img src="/static/images/up-arrow.svg" />
+          </A>
         </span>
       </div>
     </Section>

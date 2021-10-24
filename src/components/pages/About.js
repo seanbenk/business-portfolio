@@ -10,13 +10,13 @@ function About(props) {
     <Section id="about" className={styles.container}>
       <Fade>
         <div className={styles.imageDiv}>
-          <img src="/images/profile_image.png" />
+          <img src="/static/images/about/profile_image.png" />
         </div>
       </Fade>
       <Fade>
         <div className={styles.textDiv}>
           <img
-            src="/static/harbour-bridge.svg"
+            src="/static/images/about/harbour-bridge.svg"
             alt="harbour bridge"
             style={{
               position: "absolute",

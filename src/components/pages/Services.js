@@ -6,36 +6,35 @@ import * as styles from "./Services.module.scss";
 
 const svgs = [
   {
-    src: "/static/code_html_website_icon.svg",
+    src: "/static/images/services/code_html_website_icon.svg",
     alt: "an icon",
     title: "Contempary Front-End Website Design",
   },
   {
-    src: "/static/chat_group_video_icon.svg",
+    src: "/static/images/services/chat_group_video_icon.svg",
     alt: "an icon",
     title: "Constant Line of Communication",
   },
   {
-    src: "/static/control_gears_process_icon.svg",
+    src: "/static/images/services/control_gears_process_icon.svg",
     alt: "an icon",
     title: "Efficient Server Side Construction",
   },
   {
-    src: "/static/dashboard_speed_speedometer_icon.svg",
+    src: "/static/images/services/dashboard_speed_speedometer_icon.svg",
     alt: "an icon",
     title: "Fast Reliable Speeds",
   },
   {
-    src: "/static/australia_house_opera_icon.svg",
+    src: "/static/images/services/australia_house_opera_icon.svg",
     alt: "an icon",
     title: "100% Australian Based out of Sydney",
   },
   {
-    src: "/static/achievement_award_badge_icon.svg",
+    src: "/static/images/services/achievement_award_badge_icon.svg",
     alt: "an icon",
     title: "Garuanteed Customer Satisfaction",
   },
-  //   { src: "/static/devices_laptop_mobile_icon.svg", alt: "an icon" },
 ];
 
 function Services(props) {

@@ -6,7 +6,7 @@ import * as styles from "./Projects.module.scss";
 
 function Projects(props) {
   return (
-    <Section id="projects" className={styles.container}>
+    <Section id="projects" className={styles.container} fixedHeight={false}>
       <h2>My Projects</h2>
       <ProjectsSlider />
     </Section>

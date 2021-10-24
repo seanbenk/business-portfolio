@@ -20,11 +20,14 @@ function Card({
         <h1>{title}</h1> <p>{description}</p>
         <div>
           <a href={github} target="_blank">
-            <img src="/static/github-icon.svg" className={styles.githubIcon} />
+            <img
+              src="/static/images/projects/github-icon.svg"
+              className={styles.githubIcon}
+            />
           </a>
           <a href={link} target="_blank">
             <img
-              src="/static/website-icon.svg"
+              src="/static/images/projects/website-icon.svg"
               className={styles.websiteIcon}
             />
           </a>
