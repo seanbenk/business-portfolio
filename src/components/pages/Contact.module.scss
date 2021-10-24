@@ -1,13 +1,13 @@
 @import "../../config.scss";
 
-.desktopContainer {
+.container {
   background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contactsContainer {
+.contactsWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -29,5 +29,17 @@
   img {
     height: 10vh;
     width: 10vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactItemContainer {
+    flex-direction: column;
   }
 }

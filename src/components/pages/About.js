@@ -7,7 +7,7 @@ import Section from "../Section";
 
 function About(props) {
   return (
-    <Section id="about" className={`${styles.desktopContainer}`}>
+    <Section id="about" className={styles.container}>
       <Fade>
         <div className={styles.imageDiv}>
           <img src="/images/profile_image.png" />

@@ -10,13 +10,14 @@
     font-family: $montserrat;
     font-weight: 400;
   }
-  div {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    height: 60%;
-    width: 80%;
-  }
+}
+
+.iconGrid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  height: 60%;
+  width: 80%;
 }
 
 .iconContainer {
@@ -28,5 +29,19 @@
   img {
     height: 15vh;
     width: 15vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .iconGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .iconContainer {
+    img {
+      width: 80%;
+    }
   }
 }

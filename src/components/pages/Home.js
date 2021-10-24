@@ -13,17 +13,10 @@ function Home(props) {
     setDevice(isMobile ? "mobile" : "desktop");
   }, []);
   return (
-    <Section
-      className={
-        device !== "mobile" ? styles.desktopContainer : styles.mobileContainer
-      }
-      id="home"
-    >
-      <div>
+    <Section className={styles.container} id="home">
+      <div className={styles.textArea}>
         <h1>Sean Benkenstein</h1>
         <h2>web development</h2>
-        {/* <h2>web solutions</h2>
-        <h2>fullstack development</h2> */}
         <A to="about" className={styles.link}>
           <img
             src="/static/down-arrow.svg"

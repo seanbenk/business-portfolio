@@ -1,24 +1,12 @@
 @import "../../config.scss";
 
-.desktopContainer {
+.container {
   background-color: $white;
   padding-top: 2vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      height: 30vh;
-      width: 30vh;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  }
   h1 {
     font-family: $arvo;
     margin-top: 0;
@@ -33,11 +21,32 @@
   }
 }
 
-.imageDiv {
+.imageDiv,
+.textDiv {
+  display: flex;
   flex: 3;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 30vh;
+    width: 30vh;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 .textDiv {
   position: relative;
   flex: 4;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .textDiv {
+    img {
+      display: none;
+    }
+  }
 }

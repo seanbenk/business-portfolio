@@ -3,11 +3,12 @@ import React from "react";
 import * as styles from "./Contact.module.scss";
 
 import Section from "../Section";
+import A from "../Navs/A";
 
 function Contact(props) {
   return (
-    <Section id="contact" className={styles.desktopContainer}>
-      <div className={styles.contactsContainer}>
+    <Section id="contact" className={styles.container}>
+      <div className={styles.contactsWrapper}>
         <ContactItem
           src="/static/phone-icon.svg"
           alt="phone icon"
@@ -28,6 +29,9 @@ function Contact(props) {
           details="seanbenkenstein@gmail.com"
           href="mailto:seanbenkenstein@gmail.com"
         />
+        <span>
+          <A to="home">to top</A>
+        </span>
       </div>
     </Section>
   );

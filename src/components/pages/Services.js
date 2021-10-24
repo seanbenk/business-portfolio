@@ -40,9 +40,9 @@ const svgs = [
 
 function Services(props) {
   return (
-    <Section id="services" className={`${styles.desktopContainer}`}>
+    <Section id="services" className={styles.container}>
       <h1>What I Offer</h1>
-      <ul>
+      <ul className={styles.iconList}>
         {svgs.map((svg, idx) => (
           <Fade cascade key={idx} delay={200 * idx}>
             <li className={styles.iconContainer}>

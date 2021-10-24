@@ -18,12 +18,11 @@ function TechStack(props) {
   return (
     <Section className={styles.container} id="skills">
       <h1>My Favourite Technologies</h1>
-      <div>
+      <div className={styles.iconGrid}>
         {icons.map((icon, idx) => (
           <Fade key={idx}>
             <div className={styles.iconContainer}>
               <img src={icon.src} alt={icon.alt} />
-              {/* <h2>{icon.title}</h2> */}
             </div>
           </Fade>
         ))}

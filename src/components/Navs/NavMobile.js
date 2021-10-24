@@ -6,26 +6,28 @@ import * as styles from "./NavMobile.module.scss";
 
 function NavMobile({ closeMenu }) {
   return (
-    <nav className={styles.container}>
-      <A to="home" onClick={closeMenu}>
-        Home
-      </A>
-      <A to="about" onClick={closeMenu}>
-        About
-      </A>
-      <A to="skills" onClick={closeMenu}>
-        Skills
-      </A>
-      <A to="projects" onClick={closeMenu}>
-        Projects
-      </A>
-      <A to="services" onClick={closeMenu}>
-        Services
-      </A>
-      <A to="contact" onClick={closeMenu}>
-        Contact
-      </A>
-    </nav>
+    <div className={styles.container}>
+      <>
+        <A to="home" onClick={closeMenu} className={styles.A}>
+          Home
+        </A>
+        <A to="about" onClick={closeMenu} className={styles.A}>
+          About
+        </A>
+        <A to="skills" onClick={closeMenu} className={styles.A}>
+          Skills
+        </A>
+        <A to="projects" onClick={closeMenu} className={styles.A}>
+          Projects
+        </A>
+        <A to="services" onClick={closeMenu} className={styles.A}>
+          Services
+        </A>
+        <A to="contact" onClick={closeMenu} className={styles.A}>
+          Contact
+        </A>
+      </>
+    </div>
   );
 }
 

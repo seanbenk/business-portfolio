@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { isMobile } from "react-device-detect";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -40,14 +41,14 @@ const projects = [
       "A simple Tic Tac Toe game you can play against a friend, uses pure html5, css3 and javascript.",
     link: "https://seanbenk.github.io/tictactoe/",
   },
-  {
-    title: "Flappy Duck",
-    github: "https://github.com/seanbenk/flappyduck",
-    image: "/images/flappyduck.png",
-    description:
-      "a small game I made to demonstrate the power of Phaser, a javascript framework for game design",
-    link: "https://seanbenk.github.io/flappyduck/",
-  },
+  // {
+  //   title: "Flappy Duck",
+  //   github: "https://github.com/seanbenk/flappyduck",
+  //   image: "/images/flappyduck.png",
+  //   description:
+  //     "a small game I made to demonstrate the power of Phaser, a javascript framework for game design",
+  //   link: "https://seanbenk.github.io/flappyduck/",
+  // },
 ];
 
 function PrevArrow({ onClick }) {
@@ -81,7 +82,7 @@ function ProjectsSlider(props) {
     centerPadding: 0,
     focusOnSelect: true,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: isMobile ? 1 : 3,
     speed: 500,
     beforeChange: (oldIdx, nextIdx) => setSliderIndex(nextIdx),
     prevArrow: <PrevArrow />,
