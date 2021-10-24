@@ -33,7 +33,7 @@ const icons = [
 function TechStack(props) {
   return (
     <Section className={styles.container} id="skills">
-      <h1>My Favourite Technologies</h1>
+      <h1>I have experience in</h1>
       <div className={styles.iconGrid}>
         {icons.map((icon, idx) => (
           <Fade key={idx}>
