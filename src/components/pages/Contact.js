@@ -30,7 +30,7 @@ function Contact(props) {
           src="static/images/contact/resume-icon.svg"
           alt="resume icon"
           title="My Resume"
-          href="/static/Sean-Benkenstein-Professional-Resume.pdf"
+          href="https://www.canva.com/design/DAEtId1dC48/mOfRTzQmmYsKw8Ku_KJYyw/view?utm_content=DAEtId1dC48&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton"
         />
         <span className={styles.toTop}>
           <A to="home">
