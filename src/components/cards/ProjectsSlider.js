@@ -10,11 +10,11 @@ import Card from "./Card";
 
 const projects = [
   {
-    title: "Starwars",
+    title: "Star Wars",
     github: "https://github.com/seanbenk/starwars",
     image: "/static/images/projects/starwars.png",
     description:
-      "As part of one of my first coding tests, this application uses Next Js and React to display the details of starwars movies using the startwars API",
+      "As part of one of my first coding tests. This application uses Next Js and React to display the details of Star Wars movies using the star wars API",
     link: "https://radiant-temple-44508.herokuapp.com/",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     github: "https://github.com/seanbenk/path-finder",
     image: "/static/images/projects/pathfinder.png",
     description:
-      "This is an app that demonstrates path finding, dijkstra's algorithm is used to find a path from point a to point b. This application was made using react js",
+      "This is an app that demonstrates path finding techniques. The user can design a custom maze and dijkstra's algorithm is used to find a solution from point a to point b. This application was made using React JS",
     link: "https://seanbenk.github.io/path-finder/",
   },
   {

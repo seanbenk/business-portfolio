@@ -23,12 +23,12 @@ const svgs = [
   {
     src: "/static/images/services/dashboard_speed_speedometer_icon.svg",
     alt: "an icon",
-    title: "Fast Reliable Speeds",
+    title: "Quick Responsive Architecture",
   },
   {
     src: "/static/images/services/australia_house_opera_icon.svg",
     alt: "an icon",
-    title: "100% Australian Based out of Sydney",
+    title: "100% Australian Based Out of Melbourne and  Sydney",
   },
   {
     src: "/static/images/services/achievement_award_badge_icon.svg",

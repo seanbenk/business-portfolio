@@ -12,22 +12,25 @@ function Contact(props) {
         <ContactItem
           src="/static/images/contact/phone-icon.svg"
           alt="phone icon"
-          title="Mobile"
-          details="0439000690"
+          title="0439000690"
         />
         <ContactItem
           src="/static/images/contact/linkedin-icon.svg"
           alt="linked in icon"
-          title="LinkedIn"
-          details="/in/sean-benkenstein"
+          title="/in/sean-benkenstein"
           href="https://www.linkedin.com/in/sean-benkenstein/"
         />
         <ContactItem
           src="/static/images/contact/gmail-icon.svg"
           alt="email icon"
-          title="Email"
-          details="seanbenkenstein@gmail.com"
+          title="seanbenkenstein@gmail.com"
           href="mailto:seanbenkenstein@gmail.com"
+        />
+        <ContactItem
+          src="static/images/contact/resume-icon.svg"
+          alt="resume icon"
+          title="My Resume"
+          href="/static/Sean-Benkenstein-Professional-Resume.pdf"
         />
         <span className={styles.toTop}>
           <A to="home">
@@ -39,22 +42,13 @@ function Contact(props) {
   );
 }
 
-const ContactItem = ({ src, alt, title, details, href, reversed = false }) => {
+const ContactItem = ({ src, alt, title, href }) => {
   return (
     <div className={styles.contactItemContainer}>
-      {reversed ? (
-        <>
-          <a href={href}>{details}</a>
-          {/* <h2>{title}:</h2> */}
-          <img src={src} alt={alt} />
-        </>
-      ) : (
-        <>
-          <img src={src} alt={alt} />
-          {/* <h2>{title}:</h2> */}
-          <a href={href}>{details}</a>
-        </>
-      )}
+      <a className={styles.contactContainerAnchor} href={href} target="_blank">
+        <img className={styles.contactContainerImage} src={src} alt={alt} />
+        <span className={styles.contactContainerText}>{title}</span>
+      </a>
     </div>
   );
 };

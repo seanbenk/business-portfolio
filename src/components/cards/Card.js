@@ -4,12 +4,10 @@ import * as styles from "./Card.module.scss";
 
 function Card({
   title,
-  subtitle,
   description,
   github,
   link,
   image,
-  style,
   alt,
   className = null,
 }) {

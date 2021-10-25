@@ -19,17 +19,26 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 4vh;
-  a {
-    font-family: $arvo;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: $dark;
-    padding: 2vw;
-  }
-  img {
-    height: 10vh;
-    width: 10vh;
-  }
+}
+
+.contactContainerAnchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.contactContainerImage {
+  height: 10vh;
+  width: 10vh;
+}
+
+.contactContainerText {
+  font-family: $arvo;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: $dark;
+  padding: 2vw;
 }
 
 .toTop {
