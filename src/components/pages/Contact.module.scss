@@ -65,4 +65,19 @@
   .contactItemContainer {
     flex-direction: column;
   }
+  .contactItemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4vh;
+  }
+
+  .contactContainerImage {
+    height: 6vh;
+    width: 6vh;
+  }
+
+  .contactContainerText {
+    font-size: 1rem;
+  }
 }
