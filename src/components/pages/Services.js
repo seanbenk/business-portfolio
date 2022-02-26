@@ -33,7 +33,7 @@ const svgs = [
   {
     src: "/static/images/services/achievement_award_badge_icon.svg",
     alt: "an icon",
-    title: "Garuanteed Customer Satisfaction",
+    title: "Guaranteed Customer Satisfaction",
   },
 ];
 
